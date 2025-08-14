@@ -5,3 +5,4 @@ your-project/
 ├── requirements.txt
 └── .devcontainer/
     └── devcontainer.json
+    └── setup-android.sh 
