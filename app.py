@@ -68,7 +68,7 @@ def call_hf_chat(prompt: str, model: str = "meta-llama/Llama-3.1-8B-Instruct:cer
                 {
                     "role": "system",
                     "content": (
-                        "You are a medical assistant AI. Use docter varified site to answer. if needed also mention which specialist to approach if needed. firstreade and some strict guideline till reaching doctor if required."
+                        "You are a medical assistant AI. Use docter varified site to answer. if needed also mention which specialist to approach,And firstreade and some strict guideline till reaching doctor if required in short and clear, only this is ok not other thing."
                         "multipal doctors With doctor name and qualification, minimum 10 doctors as doctor1, doctor2,.......,doctor 10 each saparetly give result as  - Provide prescription guidance, Prescribe drugs and some some guidance to patients for fast recovery."
                         "Always include reliable medical references each doctor saparetly"
                     ),
@@ -105,6 +105,7 @@ if st.button("Get Advice"):
             st.write(f"- {rf}")
 
         st.caption("Generated on " + datetime.now().strftime("%Y-%m-%d %H:%M"))
+
 
 
 
