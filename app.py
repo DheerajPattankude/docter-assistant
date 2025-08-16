@@ -34,6 +34,77 @@ st.set_page_config(page_title="Virtual Doctor Assistant", page_icon="🩺", layo
 st.title("🩺 Virtual Doctor Assistant")
 st.caption(DISCLAIMER)
 
+st.markdown("""
+    <style>
+    /* Background */
+    .stApp {
+        background: linear-gradient(135deg, #FFA500, #ffffff);
+    }
+
+    /* Input Fields (text areas, multiselect, etc.) */
+    textarea, select, .stTextInput>div>div>input {
+        background-color: #ADD8E6 !important;
+        border: 2px solid #4facfe !important;
+        border-radius: 10px !important;
+        color: #003366 !important;
+    }
+
+    /* Checkbox + multiselect styling */
+    .stMultiSelect, .stCheckbox {
+        background-color: #ADD8E6 !important;
+        padding: 8px !important;
+        border-radius: 10px !important;
+        border: 1px solid #cce7ff !important;
+    }
+
+    /* Button */
+    div.stButton > button {
+        background-color: #1E90FF;
+        color: white;
+        font-weight: bold;
+        border-radius: 12px;
+        padding: 10px 20px;
+        border: none;
+        transition: 0.3s;
+    }
+    div.stButton > button:hover {
+        background-color: #00c6ff;
+        color: black;
+    }
+
+    /* AI Response Box */
+    .response-box {
+        background: #f0fff4;
+        border-left: 5px solid #38a169;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        color: #2f855a;
+        font-size: 16px;
+    }
+
+    /* Warning Box */
+    .warning-box {
+        background: #fff5f5;
+        border-left: 5px solid #e53e3e;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 12px;
+        color: #9b2c2c;
+    }
+
+    /* Red Flags */
+    .red-flag {
+        background: #fffaf0;
+        border-left: 5px solid #dd6b20;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 8px;
+        color: #7b341e;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # =========================
 # USER INPUT
 # =========================
@@ -105,6 +176,7 @@ if st.button("Get Advice"):
             st.write(f"- {rf}")
 
         st.caption("Generated on " + datetime.now().strftime("%Y-%m-%d %H:%M"))
+
 
 
 
