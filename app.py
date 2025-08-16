@@ -166,16 +166,15 @@ if st.button("Get Advice"):
         Provide safe guidance only.
         """
         ai_response = call_hf_chat(user_prompt)
-        st.write("### 🧑‍⚕️ Virtual Doctor Assistant Suggestion")
-        st.write(ai_response)
-        response = call_hf_chat(ai_response)
-        st.markdown(response)
+        st.markdown("### 🧑‍⚕️ Virtual Doctor Assistant Suggestion")
+        st.markdown(f'<div class="response-box">{ai_response}</div>', unsafe_allow_html=True)
 
         st.subheader("🚨 Emergency Red Flags")
         for rf in RED_FLAGS:
-            st.write(f"- {rf}")
+            st.markdown(f'<div class="red-flag">- {rf}</div>', unsafe_allow_html=True)
 
         st.caption("Generated on " + datetime.now().strftime("%Y-%m-%d %H:%M"))
+
 
 
 
