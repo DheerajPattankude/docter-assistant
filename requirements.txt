@@ -1,5 +1,5 @@
-streamlit
-python-dotenv
-openai>=1.0.0
-
-
+streamlit==1.37.0
+python-dotenv==1.0.1
+openai==1.40.3
+deep-translator==1.11.4
+gTTS==2.5.3
